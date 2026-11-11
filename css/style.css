@@ -1,0 +1,469 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Estrutura principal */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Painel azul */
+.login-banner {
+    width: 50%;
+    background: linear-gradient(145deg, #102f5c, #071d3c);
+    color: white;
+    padding: 80px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.brand-icon {
+    width: 90px;
+    height: 90px;
+    background: #0866ed;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    color: white;
+}
+
+.brand h1 {
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.login-banner p {
+    color: #b9cbe4;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Área do formulário */
+.login-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #ffffff;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 580px;
+}
+
+.login-form h2 {
+    font-size: 36px;
+    color: #101d35;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* Campos */
+.login-form label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #17243b;
+    margin-bottom: 12px;
+}
+
+.login-form input {
+    width: 100%;
+    height: 65px;
+    border: 1px solid #dce3ed;
+    border-radius: 10px;
+    padding: 0 20px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #0866ed;
+}
+
+/* Botão */
+.login-form button {
+    width: 100%;
+    height: 65px;
+    background: #0866ed;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-form button:hover {
+    background: #0754c5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-banner,
+    .login-content {
+        width: 100%;
+    }
+
+    .login-banner {
+        padding: 45px 30px;
+    }
+
+    .brand h1 {
+        font-size: 22px;
+    }
+
+    .brand-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 40px;
+    }
+
+    .login-banner p {
+        font-size: 16px;
+    }
+
+    .login-content {
+        padding: 50px 30px;
+    }
+
+    .login-form h2 {
+        font-size: 28px;
+    }
+}
+
+/* ===== MENU PRINCIPAL ===== */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6fa;
+}
+
+.sidebar {
+    width: 250px;
+    background: #10294b;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .brand {
+    margin-bottom: 45px;
+}
+
+.sidebar .brand h2 {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a {
+    color: #dce6f5;
+    text-decoration: none;
+    padding: 13px 15px;
+    border-radius: 8px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #155ac5;
+    color: white;
+}
+
+.user-info {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.user-info span {
+    color: #b9c8dc;
+}
+
+.user-info a {
+    color: white;
+    margin-top: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 45px;
+}
+
+.content header h1 {
+    color: #10294b;
+    font-size: 28px;
+}
+
+.content header p {
+    color: #718096;
+    margin-top: 8px;
+}
+
+.welcome {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.welcome h2 {
+    color: #10294b;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #64748b;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.summary-card h3 {
+    color: #10294b;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.summary-card a {
+    display: inline-block;
+    background: #155ac5;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+}
+
+.summary-card a:hover {
+    background: #10479d;
+}
+
+@media (max-width: 800px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 25px;
+    }
+}
+
+/* ===== FORMULÁRIOS ===== */
+
+.welcome form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.welcome form label {
+    color: #10294b;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.welcome form input,
+.welcome form textarea,
+.welcome form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5dce8;
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.welcome form input:focus,
+.welcome form textarea:focus,
+.welcome form select:focus {
+    outline: none;
+    border-color: #155ac5;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.form-actions button {
+    background: #155ac5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form-actions .btn-secondary {
+    background: #64748b;
+}
+
+/* ===== TABELAS ===== */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 14px;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+.data-table th {
+    background: #f4f6fa;
+    color: #10294b;
+}
+
+.data-table td {
+    color: #526176;
+}
+
+/* Formulários e tabelas */
+.form-card,
+.table-card {
+    background: #ffffff;
+    padding: 26px;
+    border-radius: 12px;
+    margin-top: 24px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-card h2,
+.table-card h2 {
+    margin-bottom: 22px;
+    color: #102b4e;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #102b4e;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5deeb;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #1458c8;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-actions .btn-secondary {
+    background: #64748b;
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-card th,
+.table-card td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    color: #526987;
+}
+
+.table-card th {
+    background: #f1f4f9;
+    color: #102b4e;
+}

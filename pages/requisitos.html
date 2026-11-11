@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos | Gerenciador de Requisitos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>Gerenciador de<br>Requisitos</h2>
+            </div>
+
+            <nav>
+                <a href="menu-principal.html">Menu principal</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="requisitos.html" class="active">Requisitos</a>
+                <a href="usuarios.html">Usuários</a>
+                <a href="relatorios.html">Relatórios</a>
+            </nav>
+
+            <div class="user-info">
+                <strong>Administrador</strong>
+                <span>Perfil de acesso</span>
+                <a href="../index.html">Sair</a>
+            </div>
+        </aside>
+
+        <main class="content">
+
+            <header>
+                <h1>Requisitos</h1>
+                <p>Cadastre e consulte os requisitos dos seus projetos.</p>
+            </header>
+
+            <section class="welcome">
+                <h2>Novo requisito</h2>
+
+                <form id="requisitoForm">
+                    <label for="projeto">Projeto</label>
+                    <select id="projeto" required>
+                        <option value="">Selecione um projeto</option>
+                        <option>Gerenciador de Requisitos</option>
+                        <option>Sistema de Controle de Estoque</option>
+                    </select>
+
+                    <label for="codigo">Código do requisito</label>
+                    <input type="text" id="codigo"
+                           placeholder="Ex.: RF001" required>
+
+                    <label for="tipo">Tipo de requisito</label>
+                    <select id="tipo" required>
+                        <option value="">Selecione o tipo</option>
+                        <option>Funcional</option>
+                        <option>Não funcional</option>
+                    </select>
+
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo"
+                           placeholder="Digite o título do requisito" required>
+
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" rows="4"
+                              placeholder="Descreva o requisito"></textarea>
+
+                    <label for="prioridade">Prioridade</label>
+                    <select id="prioridade" required>
+                        <option value="">Selecione a prioridade</option>
+                        <option>Alta</option>
+                        <option>Média</option>
+                        <option>Baixa</option>
+                    </select>
+
+                    <label for="complexidade">Complexidade</label>
+                    <select id="complexidade" required>
+                        <option value="">Selecione a complexidade</option>
+                        <option>Alta</option>
+                        <option>Média</option>
+                        <option>Baixa</option>
+                    </select>
+
+                    <label for="status">Status</label>
+                    <select id="status" required>
+                        <option value="">Selecione o status</option>
+                        <option>Pendente</option>
+                        <option>Em andamento</option>
+                        <option>Concluído</option>
+                    </select>
+
+                    <div class="form-actions">
+                        <button type="submit">Salvar requisito</button>
+                        <button type="reset" class="btn-secondary">Limpar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="welcome">
+                <h2>Requisitos cadastrados</h2>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Título</th>
+                            <th>Tipo</th>
+                            <th>Prioridade</th>
+                            <th>Complexidade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RF001</td>
+                            <td>Autenticar usuário</td>
+                            <td>Funcional</td>
+                            <td>Alta</td>
+                            <td>Média</td>
+                            <td>Concluído</td>
+                        </tr>
+                        <tr>
+                            <td>RF002</td>
+                            <td>Gerenciar projetos</td>
+                            <td>Funcional</td>
+                            <td>Alta</td>
+                            <td>Média</td>
+                            <td>Em andamento</td>
+                        </tr>
+                        <tr>
+                            <td>RNF001</td>
+                            <td>Plataforma web</td>
+                            <td>Não funcional</td>
+                            <td>Alta</td>
+                            <td>Média</td>
+                            <td>Pendente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+<script>
+    const requisitoForm = document.getElementById("requisitoForm");
+
+    requisitoForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        alert("Requisito cadastrado com sucesso!");
+
+        requisitoForm.reset();
+    });
+</script>
+</body>
+</html>

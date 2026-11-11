@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios | Gerenciador de Requisitos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>Gerenciador de<br>Requisitos</h2>
+            </div>
+
+            <nav>
+                <a href="menu-principal.html">Menu principal</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="requisitos.html">Requisitos</a>
+                <a href="usuarios.html">Usuários</a>
+                <a href="relatorios.html" class="active">Relatórios</a>
+            </nav>
+
+            <div class="user-info">
+                <strong>Administrador</strong>
+                <span>Perfil de acesso</span>
+                <a href="../index.html">Sair</a>
+            </div>
+        </aside>
+
+        <main class="content">
+
+            <header>
+                <h1>Relatórios</h1>
+                <p>Consulte os requisitos cadastrados e gere relatórios do sistema.</p>
+            </header>
+
+            <section class="form-card">
+                <h2>Filtros de consulta</h2>
+
+                <form>
+                    <div class="form-group">
+                        <label for="projeto">Projeto</label>
+                        <select id="projeto">
+                            <option value="">Todos os projetos</option>
+                            <option>Gerenciador de Requisitos</option>
+                            <option>Sistema de Controle de Estoque</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo de requisito</label>
+                        <select id="tipo">
+                            <option value="">Todos os tipos</option>
+                            <option>Funcional</option>
+                            <option>Não funcional</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="">Todos os status</option>
+                            <option>Pendente</option>
+                            <option>Em andamento</option>
+                            <option>Concluído</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="btnConsultar">Consultar</button>
+                        <button type="reset" class="btn-secondary">Limpar filtros</button>
+                        <button type="button" id="btnPdf">Gerar PDF</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="table-card">
+                <h2>Resultado da consulta</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Título</th>
+                            <th>Projeto</th>
+                            <th>Tipo</th>
+                            <th>Prioridade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>RF001</td>
+                            <td>Autenticar usuário</td>
+                            <td>Gerenciador de Requisitos</td>
+                            <td>Funcional</td>
+                            <td>Alta</td>
+                            <td>Concluído</td>
+                        </tr>
+
+                        <tr>
+                            <td>RF002</td>
+                            <td>Gerenciar projetos</td>
+                            <td>Gerenciador de Requisitos</td>
+                            <td>Funcional</td>
+                            <td>Alta</td>
+                            <td>Em andamento</td>
+                        </tr>
+
+                        <tr>
+                            <td>RNF001</td>
+                            <td>Plataforma web</td>
+                            <td>Gerenciador de Requisitos</td>
+                            <td>Não funcional</td>
+                            <td>Alta</td>
+                            <td>Pendente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+<script>
+    const btnConsultar = document.getElementById("btnConsultar");
+    const btnPdf = document.getElementById("btnPdf");
+
+    btnConsultar.addEventListener("click", function() {
+        const projeto = document.getElementById("projeto").value;
+        const tipo = document.getElementById("tipo").value;
+        const status = document.getElementById("status").value;
+
+        alert("Consulta realizada com sucesso!");
+    });
+
+    btnPdf.addEventListener("click", function() {
+        alert("A geração de PDF estará disponível em uma próxima versão.");
+    });
+</script>
+</body>
+</html>
